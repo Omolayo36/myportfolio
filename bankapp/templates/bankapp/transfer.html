@@ -1,0 +1,192 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Offshore Online Banking</title>
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="{% static "images/favicon.ico" %}" />
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+      <!-- Typography CSS -->
+      <link rel="stylesheet" href="{% static "css/typography.css" %}">
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="{% static "css/style.css" %}">
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="{% static "css/responsive.css" %}">
+   </head>
+    <body class="iq-bg-primary">
+        <!-- loader Start -->
+        <div id="loading">
+            <div id="loading-center">
+            </div>
+        </div>
+        
+        <!-- loader END -->
+        <!-- Wrapper Start -->
+        <div class="wrapper">
+            <div class="container p-0">
+                <div class="row no-gutters">
+                    <div class="col-sm-12 text-center">
+                        <div class="iq-error position-relative mt-5">
+                           <h4 style="margin-bottom:20px;font-weight:bolder">Wires Transfer</h4>
+                           <h5 style="margin:10px 0">Bank name
+                           <select>Choose an Option
+                            <option value="#">Choose an Option</option>
+                            <option value="#">Chase Bank</option>
+                            <option value="#">Bank of America</option>
+                            <option value="#">Wells Fargo</option>
+                            <option value="#">U.S. Bank</option>
+                            <option value="#">BBVA Compass</option>
+                            <option value="#">Capital One Bank</option>
+                            <option value="#">Bank of the west</option>
+                            <option value="#">Santander Consumer Bank</option>
+                            <option value="#">Citi Bank</option>
+                            <option value="#">Huntington Bank</option>
+                            <option value="#">M&T Bank</option>
+                            <option value="#">Woodforest National Bank</option>
+                            <option value="#">Citizens Bank</option>
+                            <option value="#">Fifth Third Bank</option>
+                            <option value="#">Key Bank</option>
+                            <option value="#">TD Bank</option>
+                            <option value="#">Sun Trust Bank</option>
+                            <option value="#">Regions Bank</option>
+                            <option value="#">PNC Bank</option>
+                            <option value="#">BB&T Bank</option>
+                            <option value="#">First National Bank</option>
+                            <option value="#">BMO Harris Bank</option>
+                            <option value="#">First Citizens Bank</option>
+                            <option value="#">Comerica Bank</option>
+                            <option value="#">People's United Bank</option>
+                            <option value="#">Umpqua Bank</option>
+                            <option value="#">Bank of the Ozarks</option>
+                            <option value="#">HSBC</option>
+                            <option value="#">MUFG Union Bank</option>
+                            <option value="#">Arvest Bank</option>
+                            <option value="#">Chemical Bank</option>
+                            <option value="#">TCF Bank</option>
+                            <option value="#">Synovus Bank</option>
+                            <option value="#">Bancorp South Bank</option>
+                            <option value="#">Washington Federal</option>
+                            <option value="#">Assiciated Bank</option>
+                            <option value="#">Iberiabank</option>
+                            <option value="#">Valley National Bank</option>
+                            <option value="#">Whitney Bank</option>
+                            <option value="#">Trust Mark National Bank</option>
+                            <option value="#">Great Western Bank</option>
+                            <option value="#">Columbia State Bank</option>
+                            <option value="#">Centennial Bank</option>
+                            <option value="#">Old National Bank</option>
+                            <option value="#">South State Bank</option>
+                            <option value="#">First Tennessee Bank</option>
+                            <option value="#">NBT Bank</option>
+                            <option value="#">Renasant Bank</option>
+                            <option value="#">Banner Bank</option>
+                            <option value="#">Webster Bank</option>
+                            <option value="#">Simmons Bank</option>
+                            <option value="#">United Bank</option>
+                            <option value="#">Frost Bank</option>
+                            <option value="#">WesBanco Bank</option>
+                            <option value="#">Commerce Bank</option>
+                            <option value="#">Investors Bank</option>
+                            <option value="#">TrustCo Bank</option>
+                            <option value="#">First Commonwealth Bank</option>
+                            <option value="#">Sterling National Bank</option>
+                            <option value="#">Carter Bank And Trust</option>
+                            <option value="#">First Midwest Bank</option>
+                            <option value="#">First Bank</option>
+                            <option value="#">Park National Bank</option>
+                            <option value="#">Pinnacle Bank</option>
+                            <option value="#">Glacier Bank</option>
+                            <option value="#">Fulton Bank</option>
+                            <option value="#">Rabobank</option>
+                            <option value="#">Zions Bank</option>
+                            <option value="#">First Merchants Bank</option>
+                            <option value="#">East West Bank</option>
+                            <option value="#">First Interstate Bank</option>
+                            <option value="#">Union Bank and Trust</option>
+                            <option value="#">Great Southern Bank</option>
+                            <option value="#">Flagster Bank</option>
+                           </select>
+                        </h5>
+                        <h5 style="margin:10px 0">Bank routing number (ABA/US SWIFT) <input  type="number" required></input></h5>
+                        <h5 style="margin:10px 0">Recipient account number <input type="number" required></input></h5>
+                        <h5 style="margin:10px 0">Verify recipient account number <input type="number" required></input></h5>
+                        <h5 style="margin:10px 0">Amount $ <input type="number" required></input></h5>
+                        <h5 style="margin:10px 0">Message to Recipient <input></input></h5>
+                            <a class="btn btn-primary mt-3" href="{% url "transfer_options" %}"><i class=""></i>Submit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper" style="margin-top:-300px">
+            <div class="container p-0">
+                <div class="row no-gutters">
+                    <div class="col-sm-12 text-center" >
+                         <a class="btn btn-primary mt-3" href="{% url "home_page" %}"><i class="ri-home-4-line"></i>Back to Home</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="iq-footer" style="width:100%; padding:15px 0;margin:200px 0 0 0">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-lg-6">
+                     <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="terms-of-service.html">Terms of Use</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-6 text-right">
+                     Copyright 2010 <a href="#">Offshore Banking</a> All Rights Reserved.
+                  </div>
+               </div>
+            </div>
+         </footer>
+
+
+        <!-- Wrapper END -->
+        <!-- color-customizer -->
+      
+       <!-- color-customizer END -->
+        <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="{% static "js/jquery.min.js" %}"></script>
+      <script src="{% static "js/popper.min.js" %}"></script>
+      <script src="{% static "js/bootstrap.min.js" %}"></script>
+      <!-- Appear JavaScript -->
+      <script src="{% static "js/jquery.appear.js" %}"></script>
+      <!-- Countdown JavaScript -->
+      <script src="{% static "js/countdown.min.js" %}"></script>
+      <!-- Counterup JavaScript -->
+      <script src="{% static "js/waypoints.min.js" %}"></script>
+      <script src="{% static "js/jquery.counterup.min.js" %}"></script>
+      <!-- Wow JavaScript -->
+      <script src="{% static "js/wow.min.js" %}"></script>
+      <!-- Apexcharts JavaScript -->
+      <script src="{% static "js/apexcharts.js" %}"></script>
+      <!-- Slick JavaScript -->
+      <script src="{% static "js/slick.min.js" %}"></script>
+      <!-- Select2 JavaScript -->
+      <script src="{% static "js/select2.min.js" %}"></script>
+      <!-- Owl Carousel JavaScript -->
+      <script src="{% static "js/owl.carousel.min.js" %}"></script>
+      <!-- Magnific Popup JavaScript -->
+      <script src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+      <!-- Smooth Scrollbar JavaScript -->
+      <script src="{% static "js/smooth-scrollbar.js" %}"></script>
+      <!-- lottie JavaScript -->
+      <script src="{% static "js/lottie.js" %}"></script>
+      <!-- Style Customizer -->
+      <script src="{% static "js/style-customizer.js" %}"></script>
+      <!-- Chart Custom JavaScript -->
+      <script src="{% static "js/chart-custom.js" %}"></script>
+      <!-- Custom JavaScript -->
+      <script src="{% static "js/custom.js" %}"></script>
+    </body>
+</html>
