@@ -18,6 +18,33 @@
         <link rel="stylesheet" href="{% static "css/responsive.css" %}">
 
         <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/flatly/bootstrap.min.css">
+
+        <style>
+
+            .input-box{
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+            .input-box input{
+                width: 150%;
+                padding: 10px;
+                border: 0;
+                outline: 0;
+                font-size: 24px;
+                color: #555;
+            }
+
+            .input-box img{
+                width: 20px;
+                height: 10px;
+                cursor: pointer;
+                position: relative;
+                right: 20px;
+            }
+
+        </style>
      </head>
    <body>
 
@@ -57,12 +84,15 @@
                                 {% csrf_token %}
                                   <div class="form-group">
                                       <label for="username">User ID</label>
-                                      <input type="text" name="username" id="username" class="form-control mb-0" placeholder="Enter email">
+                                      <input type="text" name="username" id="username" class="form-control mb-0" placeholder="User Id">
                                   </div>
                                   <div class="form-group">
                                       <label for="pass">Password</label>
                                       <a href="#" class="float-right">Forgot password?</a>
-                                      <input type="password" name="password" id="pass" class="form-control mb-0" placeholder="Password">
+                                  </div>
+                                  <div class="input-box form-group">
+                                      <input type="password" name="password" id="password" class="form-control mb-0" placeholder="Password">
+                                      <img src="{% static "images/icon/eye-close.png" %}" id="eyeicon">
                                   </div>
                                   <div class="d-inline-block w-100">
                                       <div class="custom-control custom-checkbox d-inline-block mt-2 pt-1">
@@ -136,6 +166,25 @@
                <a target="_blank" class="btn btn-primary d-block mt-3" href="">Purchase Now</a>
            </div>
        </div>
+
+
+       <script>
+
+        let eyeicon = document.getElementById("eyeicon");
+        let password = document.getElementById("password");
+
+        eyeicon.onclick = function(){
+            if(password.type == "password"){
+                password.type = "text";
+                eyeicon.src = "{% static "images/icon/eye-open.png" %}";
+            }else{
+                password.type = "Password";
+                eyeicon.src = "{% static "images/icon/eye-close.png" %}";
+            }
+        }
+
+       </script>
+
        <!-- color-customizer END -->
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
